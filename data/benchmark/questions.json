@@ -1,0 +1,1007 @@
+{
+  "version": "1.0",
+  "description": "IP-SAKTI Sahayak — RAG Evaluation Benchmark",
+  "total_questions": 100,
+  "questions": [
+    {
+      "id": "q001",
+      "question": "What is a patent and what does it protect?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 2",
+      "ground_truth_notes": "A patent protects a new invention that is capable of industrial application. Term is 20 years from filing date."
+    },
+    {
+      "id": "q002",
+      "question": "Who can apply for a patent in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 6",
+      "ground_truth_notes": "True and first inventor or their assignee or legal representative."
+    },
+    {
+      "id": "q003",
+      "question": "What inventions cannot be patented in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Sections 3 and 4",
+      "ground_truth_notes": "Non-patentable: discoveries, mathematical methods, mental acts, business methods, traditional knowledge, plants, animals, etc."
+    },
+    {
+      "id": "q004",
+      "question": "How long is patent protection valid in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "timeline",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 53",
+      "ground_truth_notes": "20 years from the date of filing of the application."
+    },
+    {
+      "id": "q005",
+      "question": "What is the fee for filing a patent application in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "fees",
+      "expected_source_type": "rules",
+      "expected_provision": "Patents Rules, 2003 — First Schedule",
+      "ground_truth_notes": "Fees vary by applicant type (individual/startup/small entity/large entity). Check current schedule."
+    },
+    {
+      "id": "q006",
+      "question": "What is a provisional patent application?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 9",
+      "ground_truth_notes": "A provisional specification can be filed without complete specification, providing 12 months to file complete specification."
+    },
+    {
+      "id": "q007",
+      "question": "What is prior art in Indian patent law?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 2(1)(l)",
+      "ground_truth_notes": "Prior art includes prior publication, prior use, prior knowledge that affects novelty."
+    },
+    {
+      "id": "q008",
+      "question": "What is compulsory licensing of a patent?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "licensing",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Chapter XVI, Section 84",
+      "ground_truth_notes": "After 3 years from grant, any person may apply for compulsory license on specific grounds."
+    },
+    {
+      "id": "q009",
+      "question": "How do I file a patent application in India step by step?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "procedure",
+      "expected_source_type": "manual",
+      "expected_provision": "Manual of Patent Practice and Procedure",
+      "ground_truth_notes": "File application, pay fees, examination request, FER, reply, grant or refusal."
+    },
+    {
+      "id": "q010",
+      "question": "What is Section 8 of the Patents Act?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "source_lookup",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 8",
+      "ground_truth_notes": "Section 8 requires applicant to disclose information about foreign patent applications."
+    },
+    {
+      "id": "q011",
+      "question": "What is a trademark and what can be registered as a trademark?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 2",
+      "ground_truth_notes": "A trademark is a mark that distinguishes goods/services. Can be word, logo, shape, sound, color combination."
+    },
+    {
+      "id": "q012",
+      "question": "मैं अपने स्टार्टअप के ब्रांड नाम को ट्रेडमार्क कैसे करूं?",
+      "language": "hi",
+      "expected_domain": "trademark",
+      "expected_intent": "registration",
+      "expected_source_type": "rules",
+      "expected_provision": "Trade Marks Rules, 2017",
+      "ground_truth_notes": "TM-A form, filing at CGPDTM, examination, opposition period, registration."
+    },
+    {
+      "id": "q013",
+      "question": "How long does trademark registration take in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "timeline",
+      "expected_source_type": "rules",
+      "expected_provision": "Trade Marks Act, 1999 — Section 18",
+      "ground_truth_notes": "Can take 18 months to 3+ years depending on objections and opposition."
+    },
+    {
+      "id": "q014",
+      "question": "What is the difference between TM and R symbols?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999",
+      "ground_truth_notes": "TM = unregistered mark. ® = registered trademark. Using ® on unregistered mark is an offence."
+    },
+    {
+      "id": "q015",
+      "question": "What is Rule 23 of the Trade Marks Rules 2017?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "source_lookup",
+      "expected_source_type": "rules",
+      "expected_provision": "Trade Marks Rules, 2017 — Rule 23",
+      "ground_truth_notes": "Rule 23 relates to registration of trademark, conditions for registration."
+    },
+    {
+      "id": "q016",
+      "question": "What are absolute grounds for refusal of trademark registration?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 9",
+      "ground_truth_notes": "Marks devoid of distinctive character, descriptive marks, generic terms, deceptive marks."
+    },
+    {
+      "id": "q017",
+      "question": "How do I oppose a trademark registration in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "opposition",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 21",
+      "ground_truth_notes": "Opposition must be filed within 4 months of publication in Trade Marks Journal."
+    },
+    {
+      "id": "q018",
+      "question": "How long is trademark registration valid in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "timeline",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 25",
+      "ground_truth_notes": "10 years, renewable for further periods of 10 years."
+    },
+    {
+      "id": "q019",
+      "question": "ট্রেডমার্ক রেজিস্ট্রেশন কীভাবে করতে হয়?",
+      "language": "bn",
+      "expected_domain": "trademark",
+      "expected_intent": "registration",
+      "expected_source_type": "rules",
+      "expected_provision": "Trade Marks Rules, 2017",
+      "ground_truth_notes": "Trademark registration procedure in India."
+    },
+    {
+      "id": "q020",
+      "question": "Mere startup ke logo aur brand name ko trademark kaise protect karein?",
+      "language": "mixed",
+      "expected_domain": "trademark",
+      "expected_intent": "registration",
+      "expected_source_type": "rules",
+      "expected_provision": "Trade Marks Act, 1999",
+      "ground_truth_notes": "Logo can be registered as device mark, brand name as word mark."
+    },
+    {
+      "id": "q021",
+      "question": "What does copyright protect in India?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957 — Section 13",
+      "ground_truth_notes": "Original literary, dramatic, musical, artistic works, cinematographic films, sound recordings."
+    },
+    {
+      "id": "q022",
+      "question": "How long does copyright last in India?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "timeline",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957 — Section 22",
+      "ground_truth_notes": "Life of author + 60 years for literary/dramatic/musical/artistic works."
+    },
+    {
+      "id": "q023",
+      "question": "Is software protectable by copyright in India?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957 — Section 2(o)",
+      "ground_truth_notes": "Computer programs are included in 'literary works' and protectable by copyright."
+    },
+    {
+      "id": "q024",
+      "question": "How do I register copyright in India?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "registration",
+      "expected_source_type": "rules",
+      "expected_provision": "Copyright Rules, 2013",
+      "ground_truth_notes": "Apply to Copyright Office, Form XIV, fee, examination, registration."
+    },
+    {
+      "id": "q025",
+      "question": "What is fair use or fair dealing in Indian copyright law?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957 — Section 52",
+      "ground_truth_notes": "Section 52 lists permitted acts: research, private study, criticism, review, reporting, education."
+    },
+    {
+      "id": "q026",
+      "question": "Does copyright need to be registered in India?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "registration",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957",
+      "ground_truth_notes": "Registration is not mandatory but provides prima facie evidence of ownership."
+    },
+    {
+      "id": "q027",
+      "question": "What is moral right in Indian copyright?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957 — Section 57",
+      "ground_truth_notes": "Right of paternity (attribution) and right of integrity survive even after assignment."
+    },
+    {
+      "id": "q028",
+      "question": "What is copyright infringement and what are the remedies?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "infringement",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957 — Sections 51, 55, 63",
+      "ground_truth_notes": "Civil remedies (injunction, damages) and criminal remedies (imprisonment up to 3 years, fine)."
+    },
+    {
+      "id": "q029",
+      "question": "मेरी कविता का कॉपीराइट कितने साल तक रहेगा?",
+      "language": "hi",
+      "expected_domain": "copyright",
+      "expected_intent": "timeline",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957 — Section 22",
+      "ground_truth_notes": "Author's lifetime + 60 years."
+    },
+    {
+      "id": "q030",
+      "question": "What is an industrial design and how is it protected?",
+      "language": "en",
+      "expected_domain": "design",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Designs Act, 2000 — Section 2",
+      "ground_truth_notes": "A design relates to features of shape, configuration, pattern applied to an article by industrial process."
+    },
+    {
+      "id": "q031",
+      "question": "How do I register a design in India?",
+      "language": "en",
+      "expected_domain": "design",
+      "expected_intent": "registration",
+      "expected_source_type": "rules",
+      "expected_provision": "Designs Rules, 2001",
+      "ground_truth_notes": "File application with design drawings/photographs, pay fee, examination, registration."
+    },
+    {
+      "id": "q032",
+      "question": "How long is design registration valid in India?",
+      "language": "en",
+      "expected_domain": "design",
+      "expected_intent": "timeline",
+      "expected_source_type": "act",
+      "expected_provision": "Designs Act, 2000 — Section 11",
+      "ground_truth_notes": "10 years initially, extendable by 5 more years. Maximum 15 years."
+    },
+    {
+      "id": "q033",
+      "question": "Can I protect my product packaging as a design in India?",
+      "language": "en",
+      "expected_domain": "design",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Designs Act, 2000",
+      "ground_truth_notes": "Yes, if novel and original. Trade dress can also qualify."
+    },
+    {
+      "id": "q034",
+      "question": "What cannot be registered as a design in India?",
+      "language": "en",
+      "expected_domain": "design",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Designs Act, 2000 — Section 4",
+      "ground_truth_notes": "Not new or original, contrary to public order or morality, prior publication."
+    },
+    {
+      "id": "q035",
+      "question": "What is a geographical indication?",
+      "language": "en",
+      "expected_domain": "gi",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "GI Act, 1999 — Section 2",
+      "ground_truth_notes": "GI identifies a product as originating from a specific geographical region with qualities attributable to that region."
+    },
+    {
+      "id": "q036",
+      "question": "Can an individual register a GI in India?",
+      "language": "en",
+      "expected_domain": "gi",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "GI Act, 1999 — Section 11",
+      "ground_truth_notes": "Only an association of persons, producers' organization, or authority can register a GI, not an individual."
+    },
+    {
+      "id": "q037",
+      "question": "What is Darjeeling tea's status as a GI?",
+      "language": "en",
+      "expected_domain": "gi",
+      "expected_intent": "general_ip_guidance",
+      "expected_source_type": "act",
+      "expected_provision": "GI Registry records",
+      "ground_truth_notes": "Darjeeling tea was India's first GI product (GI application no. 1)."
+    },
+    {
+      "id": "q038",
+      "question": "How long is GI registration valid?",
+      "language": "en",
+      "expected_domain": "gi",
+      "expected_intent": "timeline",
+      "expected_source_type": "act",
+      "expected_provision": "GI Act, 1999 — Section 18",
+      "ground_truth_notes": "10 years, renewable."
+    },
+    {
+      "id": "q039",
+      "question": "What is the SICLD Act 2000?",
+      "language": "en",
+      "expected_domain": "sicld",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "SICLD Act, 2000",
+      "ground_truth_notes": "Semiconductor Integrated Circuits Layout-Design Act 2000 protects original layout-designs of ICs."
+    },
+    {
+      "id": "q040",
+      "question": "How long is semiconductor IC layout design protection valid?",
+      "language": "en",
+      "expected_domain": "sicld",
+      "expected_intent": "timeline",
+      "expected_source_type": "act",
+      "expected_provision": "SICLD Act, 2000",
+      "ground_truth_notes": "10 years from date of registration or first commercial exploitation."
+    },
+    {
+      "id": "q041",
+      "question": "What is the difference between a patent and a trademark?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "comparison",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act 1970, Trade Marks Act 1999",
+      "ground_truth_notes": "Patent protects inventions (20 years). Trademark protects brand identifiers (10 years, renewable)."
+    },
+    {
+      "id": "q042",
+      "question": "Patent aur copyright mein kya antar hai?",
+      "language": "mixed",
+      "expected_domain": "patent",
+      "expected_intent": "comparison",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act 1970, Copyright Act 1957",
+      "ground_truth_notes": "Patent: inventions, 20 years, registration required. Copyright: creative works, lifetime+60 years, automatic."
+    },
+    {
+      "id": "q043",
+      "question": "Which IP protection is best for my mobile app?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "comparison",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act 1957, Patents Act 1970, Trade Marks Act 1999",
+      "ground_truth_notes": "Code: copyright. Brand name/logo: trademark. Novel technical feature: patent. Multiple forms may apply."
+    },
+    {
+      "id": "q044",
+      "question": "What IP protections are available for a startup?",
+      "language": "en",
+      "expected_domain": "startup",
+      "expected_intent": "general_ip_guidance",
+      "expected_source_type": "guideline",
+      "expected_provision": "Startup India Action Plan",
+      "ground_truth_notes": "Patents, trademarks, copyright, designs. DPIIT-recognized startups get fee rebates."
+    },
+    {
+      "id": "q045",
+      "question": "What is DPIIT recognition for startups?",
+      "language": "en",
+      "expected_domain": "startup",
+      "expected_intent": "eligibility",
+      "expected_source_type": "guideline",
+      "expected_provision": "Startup India Action Plan",
+      "ground_truth_notes": "Startups can apply for DPIIT recognition to access tax benefits, self-certification, fast-track IP."
+    },
+    {
+      "id": "q046",
+      "question": "Do startups get any IP fee discounts in India?",
+      "language": "en",
+      "expected_domain": "startup",
+      "expected_intent": "fees",
+      "expected_source_type": "rules",
+      "expected_provision": "Patents Rules 2003, Trade Marks Rules 2017",
+      "ground_truth_notes": "Startups recognized by DPIIT get 80% rebate on patent fees and 50% on trademark fees."
+    },
+    {
+      "id": "q047",
+      "question": "What is the Digital Personal Data Protection Act 2023?",
+      "language": "en",
+      "expected_domain": "data_protection",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "DPDP Act, 2023",
+      "ground_truth_notes": "India's primary law for protection of digital personal data, establishing rights of data principals and obligations of data fiduciaries."
+    },
+    {
+      "id": "q048",
+      "question": "What are the rights of data principals under DPDP Act 2023?",
+      "language": "en",
+      "expected_domain": "data_protection",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "DPDP Act, 2023 — Section 11-14",
+      "ground_truth_notes": "Right to access, correct, erase personal data; right to grievance redressal; right to nominate."
+    },
+    {
+      "id": "q049",
+      "question": "What is consent under the DPDP Act 2023?",
+      "language": "en",
+      "expected_domain": "data_protection",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "DPDP Act, 2023 — Section 6-7",
+      "ground_truth_notes": "Consent must be free, specific, informed, unconditional, unambiguous."
+    },
+    {
+      "id": "q050",
+      "question": "डेटा प्रोटेक्शन बोर्ड क्या है?",
+      "language": "hi",
+      "expected_domain": "data_protection",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "DPDP Act, 2023",
+      "ground_truth_notes": "Data Protection Board of India is the adjudicating body under the DPDP Act."
+    },
+    {
+      "id": "q051",
+      "question": "What is a patent attorney and do I need one in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "general_ip_guidance",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 132",
+      "ground_truth_notes": "A patent agent registered with the Indian Patent Office can represent applicants."
+    },
+    {
+      "id": "q052",
+      "question": "What is PCT and can Indian applicants use it?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "procedure",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Chapter IVA",
+      "ground_truth_notes": "PCT = Patent Cooperation Treaty. Indian applicants can file PCT applications through IP India."
+    },
+    {
+      "id": "q053",
+      "question": "What is the examination process for a patent in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "procedure",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Sections 11A-12",
+      "ground_truth_notes": "Substantive examination on request, First Examination Report (FER), applicant responds, then grant or refusal."
+    },
+    {
+      "id": "q054",
+      "question": "What is a trade secret and is it protected in India?",
+      "language": "en",
+      "expected_domain": "regulatory_general",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "No specific statute — common law protection",
+      "ground_truth_notes": "India has no specific trade secret law; protection through common law, contract, and equity."
+    },
+    {
+      "id": "q055",
+      "question": "Can I assign my patent to another person in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "assignment",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 70",
+      "ground_truth_notes": "Yes, assignments must be in writing and recorded with the Patent Office."
+    },
+    {
+      "id": "q056",
+      "question": "What is patent licensing and how does it work?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "licensing",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Chapter XVI",
+      "ground_truth_notes": "Patentee can grant voluntary licenses. Compulsory licenses available after 3 years on specific grounds."
+    },
+    {
+      "id": "q057",
+      "question": "What are the requirements for a valid trademark in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 2, 9",
+      "ground_truth_notes": "Must be distinctive, capable of graphical representation, identify source of goods/services."
+    },
+    {
+      "id": "q058",
+      "question": "ट्रेडमार्क कितने साल के लिए वैध होता है?",
+      "language": "hi",
+      "expected_domain": "trademark",
+      "expected_intent": "timeline",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 25",
+      "ground_truth_notes": "10 years, renewal for further 10-year periods."
+    },
+    {
+      "id": "q059",
+      "question": "What is trademark passing off in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "infringement",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 27",
+      "ground_truth_notes": "Common law action for unregistered marks. Requires goodwill, misrepresentation, damage."
+    },
+    {
+      "id": "q060",
+      "question": "How do I search existing trademarks in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "procedure",
+      "expected_source_type": "rules",
+      "expected_provision": "IP India trademark search portal",
+      "ground_truth_notes": "Use IP India's online trademark search at ipindiaonline.gov.in/tmrpublicsearch"
+    },
+    {
+      "id": "q061",
+      "question": "Can a sound be registered as a trademark in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 2(1)(zb)",
+      "ground_truth_notes": "Yes, non-traditional marks including sounds are registrable if distinctive."
+    },
+    {
+      "id": "q062",
+      "question": "What is the Nice Classification for trademarks?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "definition",
+      "expected_source_type": "rules",
+      "expected_provision": "Trade Marks Rules, 2017",
+      "ground_truth_notes": "International classification of goods and services (Classes 1-45). India follows Nice Classification."
+    },
+    {
+      "id": "q063",
+      "question": "Copyright kitne saal mein expire hota hai?",
+      "language": "mixed",
+      "expected_domain": "copyright",
+      "expected_intent": "timeline",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957 — Section 22",
+      "ground_truth_notes": "Author ki life + 60 years."
+    },
+    {
+      "id": "q064",
+      "question": "What happens if I use copyrighted material without permission in India?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "infringement",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957 — Sections 51, 55, 63",
+      "ground_truth_notes": "Civil: injunction, damages. Criminal: imprisonment up to 3 years and fine."
+    },
+    {
+      "id": "q065",
+      "question": "Can I copyright a recipe in India?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957",
+      "ground_truth_notes": "The expression of a recipe (as written text) can be copyrighted but not the recipe itself (the idea)."
+    },
+    {
+      "id": "q066",
+      "question": "What are Locarno classes for design registration?",
+      "language": "en",
+      "expected_domain": "design",
+      "expected_intent": "definition",
+      "expected_source_type": "rules",
+      "expected_provision": "Designs Rules, 2001",
+      "ground_truth_notes": "International classification system for industrial designs used in India."
+    },
+    {
+      "id": "q067",
+      "question": "Can I cancel a registered design in India?",
+      "language": "en",
+      "expected_domain": "design",
+      "expected_intent": "procedure",
+      "expected_source_type": "act",
+      "expected_provision": "Designs Act, 2000 — Section 19",
+      "ground_truth_notes": "Any person can petition for cancellation to High Court on grounds like prior publication, not novel, etc."
+    },
+    {
+      "id": "q068",
+      "question": "How many GIs are registered in India?",
+      "language": "en",
+      "expected_domain": "gi",
+      "expected_intent": "general_ip_guidance",
+      "expected_source_type": "act",
+      "expected_provision": "GI Registry",
+      "ground_truth_notes": "Over 600 GIs registered as of recent data. [Note: verify current count from GI Registry]"
+    },
+    {
+      "id": "q069",
+      "question": "What is the opposition process for GI registration?",
+      "language": "en",
+      "expected_domain": "gi",
+      "expected_intent": "opposition",
+      "expected_source_type": "act",
+      "expected_provision": "GI Act, 1999 — Section 14",
+      "ground_truth_notes": "Published in GI Journal. Opposition can be filed within 3 months of publication."
+    },
+    {
+      "id": "q070",
+      "question": "What is a data fiduciary under DPDP Act?",
+      "language": "en",
+      "expected_domain": "data_protection",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "DPDP Act, 2023 — Section 2",
+      "ground_truth_notes": "An entity that determines the purpose and means of processing personal data."
+    },
+    {
+      "id": "q071",
+      "question": "What are the penalties under the DPDP Act 2023?",
+      "language": "en",
+      "expected_domain": "data_protection",
+      "expected_intent": "compliance",
+      "expected_source_type": "act",
+      "expected_provision": "DPDP Act, 2023 — Schedule 1",
+      "ground_truth_notes": "Up to Rs 250 crore for not implementing reasonable security safeguards; various other penalties."
+    },
+    {
+      "id": "q072",
+      "question": "I created a new machine. What IP protection options do I have?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "general_ip_guidance",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970",
+      "ground_truth_notes": "Patent for novel technical aspects. Design for aesthetic appearance. Copyright for drawings. Trademark for brand."
+    },
+    {
+      "id": "q073",
+      "question": "टेक्नोलॉजी स्टार्टअप के लिए कौन सी आईपी सुरक्षा सबसे उपयुक्त है?",
+      "language": "hi",
+      "expected_domain": "startup",
+      "expected_intent": "general_ip_guidance",
+      "expected_source_type": "guideline",
+      "expected_provision": "Startup India Action Plan",
+      "ground_truth_notes": "Patent for core technology, trademark for brand, copyright for code."
+    },
+    {
+      "id": "q074",
+      "question": "What is the Patent Office in India and where is it located?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "general_ip_guidance",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 74",
+      "ground_truth_notes": "The Patent Office operates under CGPDTM. Head office in Kolkata; branch offices in Delhi, Mumbai, Chennai."
+    },
+    {
+      "id": "q075",
+      "question": "What is an expedited examination of a patent application?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "procedure",
+      "expected_source_type": "rules",
+      "expected_provision": "Patents Rules, 2003 — Rule 24C",
+      "ground_truth_notes": "Available for DPIIT startups, women inventors, small entities; request within 48 months."
+    },
+    {
+      "id": "q076",
+      "question": "Can a foreign company apply for a patent in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 6",
+      "ground_truth_notes": "Yes, foreign applicants can file through an Indian resident patent agent."
+    },
+    {
+      "id": "q077",
+      "question": "What is the Trade Marks Journal?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999",
+      "ground_truth_notes": "Official publication where accepted trademark applications are advertised before registration."
+    },
+    {
+      "id": "q078",
+      "question": "What is a certification trademark in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 2(1)(e)",
+      "ground_truth_notes": "A mark used to certify the quality or origin of goods (like ISI mark, Agmark)."
+    },
+    {
+      "id": "q079",
+      "question": "What is collective trademark in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 61",
+      "ground_truth_notes": "A mark distinguishing goods/services of members of an association from those of others."
+    },
+    {
+      "id": "q080",
+      "question": "Can I trademark a colour in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 10",
+      "ground_truth_notes": "Colors can be registered if distinctive for the goods/services. Single color is harder; color combination easier."
+    },
+    {
+      "id": "q081",
+      "question": "What is Section 3 of the Patents Act about?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "source_lookup",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 3",
+      "ground_truth_notes": "Section 3 lists what are not inventions: discoveries, mental acts, business methods, traditional knowledge, etc."
+    },
+    {
+      "id": "q082",
+      "question": "ডিজাইন রেজিস্ট্রেশন কত বছরের জন্য বৈধ?",
+      "language": "bn",
+      "expected_domain": "design",
+      "expected_intent": "timeline",
+      "expected_source_type": "act",
+      "expected_provision": "Designs Act, 2000 — Section 11",
+      "ground_truth_notes": "10 years, extendable by 5 years."
+    },
+    {
+      "id": "q083",
+      "question": "What is working of a patent requirement in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "compliance",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 146",
+      "ground_truth_notes": "Patentees must file annual working statements (Form 27) showing extent of working in India."
+    },
+    {
+      "id": "q084",
+      "question": "ట్రేడ్‌మార్క్ రిజిస్ట్రేషన్ ఎంత కాలానికి అయ్యాక రిన్యూ చేయాలి?",
+      "language": "te",
+      "expected_domain": "trademark",
+      "expected_intent": "renewal",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 25",
+      "ground_truth_notes": "10 years after registration or last renewal."
+    },
+    {
+      "id": "q085",
+      "question": "What is TRIPs and how does it affect Indian IP law?",
+      "language": "en",
+      "expected_domain": "regulatory_general",
+      "expected_intent": "general_ip_guidance",
+      "expected_source_type": "act",
+      "expected_provision": "India's IP laws amended to comply with TRIPs",
+      "ground_truth_notes": "TRIPs is WTO agreement on IP. India amended its IP laws in 2002-2005 to comply."
+    },
+    {
+      "id": "q086",
+      "question": "Can AI-generated inventions be patented in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 6",
+      "ground_truth_notes": "Current Indian law requires the inventor to be a natural person. AI as sole inventor not recognized."
+    },
+    {
+      "id": "q087",
+      "question": "What is a plant variety protection in India?",
+      "language": "en",
+      "expected_domain": "regulatory_general",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Protection of Plant Varieties and Farmers' Rights Act, 2001",
+      "ground_truth_notes": "PPVFRA provides sui generis protection for new plant varieties, distinct from patents."
+    },
+    {
+      "id": "q088",
+      "question": "What are the documents required for trademark registration?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "documents",
+      "expected_source_type": "rules",
+      "expected_provision": "Trade Marks Rules, 2017",
+      "ground_truth_notes": "Application form TM-A, representation of the mark, list of goods/services, POA if filed through agent, user affidavit if claiming prior use."
+    },
+    {
+      "id": "q089",
+      "question": "पेटेंट के लिए Form 1 क्या होता है?",
+      "language": "hi",
+      "expected_domain": "patent",
+      "expected_intent": "documents",
+      "expected_source_type": "rules",
+      "expected_provision": "Patents Rules, 2003",
+      "ground_truth_notes": "Form 1 is the application for grant of patent in India."
+    },
+    {
+      "id": "q090",
+      "question": "What is the Copyright Office in India?",
+      "language": "en",
+      "expected_domain": "copyright",
+      "expected_intent": "general_ip_guidance",
+      "expected_source_type": "act",
+      "expected_provision": "Copyright Act, 1957 — Section 9",
+      "ground_truth_notes": "The Copyright Office is headed by the Registrar of Copyrights. Based in New Delhi."
+    },
+    {
+      "id": "q091",
+      "question": "Can I use someone else's trademark in comparative advertising in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "compliance",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 30",
+      "ground_truth_notes": "Comparative advertising may be permitted if not misleading. Section 30 covers permitted acts."
+    },
+    {
+      "id": "q092",
+      "question": "What is a well-known trademark in India?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "definition",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 2(1)(zg)",
+      "ground_truth_notes": "A mark known to substantial segment of the public in India. Gets protection across all classes."
+    },
+    {
+      "id": "q093",
+      "question": "What is a design piracy and what are its consequences?",
+      "language": "en",
+      "expected_domain": "design",
+      "expected_intent": "infringement",
+      "expected_source_type": "act",
+      "expected_provision": "Designs Act, 2000 — Section 22",
+      "ground_truth_notes": "Applying a registered design without license is piracy. Civil remedy: damages up to Rs 50,000 or injunction."
+    },
+    {
+      "id": "q094",
+      "question": "How do I register a GI product in India?",
+      "language": "en",
+      "expected_domain": "gi",
+      "expected_intent": "registration",
+      "expected_source_type": "act",
+      "expected_provision": "GI Act, 1999 — Section 11",
+      "ground_truth_notes": "Apply to GI Registry, Geographical Indications Registry is in Chennai."
+    },
+    {
+      "id": "q095",
+      "question": "What is Section 9 of the Trade Marks Act?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "source_lookup",
+      "expected_source_type": "act",
+      "expected_provision": "Trade Marks Act, 1999 — Section 9",
+      "ground_truth_notes": "Absolute grounds for refusal of registration."
+    },
+    {
+      "id": "q096",
+      "question": "Can I patent a business method in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "eligibility",
+      "expected_source_type": "act",
+      "expected_provision": "Patents Act, 1970 — Section 3(k)",
+      "ground_truth_notes": "No. Business methods are excluded from patentability under Section 3(k)."
+    },
+    {
+      "id": "q097",
+      "question": "स्टार्टअप को पेटेंट फाइल करने में कितना खर्च आता है?",
+      "language": "hi",
+      "expected_domain": "startup",
+      "expected_intent": "fees",
+      "expected_source_type": "rules",
+      "expected_provision": "Patents Rules, 2003 — First Schedule",
+      "ground_truth_notes": "DPIIT-recognized startups get 80% fee reduction. Current fee per form varies."
+    },
+    {
+      "id": "q098",
+      "question": "What quantum computing patents exist in India?",
+      "language": "en",
+      "expected_domain": "patent",
+      "expected_intent": "general_ip_guidance",
+      "expected_source_type": "act",
+      "expected_provision": null,
+      "ground_truth_notes": "This question may exceed the knowledge base scope — system should indicate insufficient evidence."
+    },
+    {
+      "id": "q099",
+      "question": "What is the exact fee for filing Form TM-A for a trademark in India today?",
+      "language": "en",
+      "expected_domain": "trademark",
+      "expected_intent": "fees",
+      "expected_source_type": "rules",
+      "expected_provision": "Trade Marks Rules, 2017 — Schedule of Fees",
+      "ground_truth_notes": "Current fee is in the Trade Marks Rules schedule. System should cite rule, not fabricate number."
+    },
+    {
+      "id": "q100",
+      "question": "Who invented the internet?",
+      "language": "en",
+      "expected_domain": "unknown",
+      "expected_intent": "general_ip_guidance",
+      "expected_source_type": null,
+      "expected_provision": null,
+      "ground_truth_notes": "Out of scope question — system should gracefully indicate this is outside the IP/regulatory domain."
+    }
+  ]
+}

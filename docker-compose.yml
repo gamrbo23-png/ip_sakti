@@ -1,0 +1,132 @@
+version: '3.9'
+
+services:
+  # ─── PostgreSQL with pgvector ───────────────────────────────────────────────
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: ipsakti-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-ipsakti}
+      POSTGRES_USER: ${POSTGRES_USER:-ipsakti_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ipsakti_password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/sql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-ipsakti_user} -d ${POSTGRES_DB:-ipsakti}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - ipsakti-net
+
+  # ─── MinIO Object Storage ────────────────────────────────────────────────────
+  minio:
+    image: minio/minio:latest
+    container_name: ipsakti-minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-minioadmin}
+    volumes:
+      - minio_data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - ipsakti-net
+
+  # ─── FastAPI Backend ─────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ipsakti-backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-ipsakti_user}:${POSTGRES_PASSWORD:-ipsakti_password}@postgres:5432/${POSTGRES_DB:-ipsakti}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_API_BASE: ${OPENAI_API_BASE:-https://api.openai.com/v1}
+      LLM_MODEL_NAME: ${LLM_MODEL_NAME:-gpt-4o}
+      EMBEDDING_MODEL_NAME: ${EMBEDDING_MODEL_NAME:-BAAI/BGE-M3}
+      EMBEDDING_DEVICE: ${EMBEDDING_DEVICE:-cpu}
+      RERANKER_MODEL_NAME: ${RERANKER_MODEL_NAME:-BAAI/bge-reranker-v2-m3}
+      RERANKER_DEVICE: ${RERANKER_DEVICE:-cpu}
+      SECRET_KEY: ${SECRET_KEY:-change_in_production}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-change_jwt_secret}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+      MINIO_BUCKET_NAME: ${MINIO_BUCKET_NAME:-ipsakti-documents}
+      MINIO_SECURE: "false"
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      VECTOR_TOP_K: ${VECTOR_TOP_K:-20}
+      KEYWORD_TOP_K: ${KEYWORD_TOP_K:-20}
+      RERANK_TOP_K: ${RERANK_TOP_K:-8}
+      FINAL_CONTEXT_K: ${FINAL_CONTEXT_K:-5}
+    volumes:
+      - ./data:/app/data
+      - model_cache:/root/.cache/huggingface
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - ipsakti-net
+
+  # ─── Next.js Frontend ────────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+        NEXT_PUBLIC_APP_NAME: "IP-SAKTI Sahayak"
+    container_name: ipsakti-frontend
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - ipsakti-net
+
+volumes:
+  postgres_data:
+    driver: local
+  minio_data:
+    driver: local
+  model_cache:
+    driver: local
+
+networks:
+  ipsakti-net:
+    driver: bridge

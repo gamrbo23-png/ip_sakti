@@ -1,0 +1,319 @@
+{
+  "version": "1.0",
+  "last_updated": "2024-01-01",
+  "sources": [
+    {
+      "id": "src_patent_act_1970",
+      "name": "The Patents Act, 1970",
+      "authority": "IP India / CGPDTM",
+      "authority_tier": "TIER_1",
+      "domain": "patent",
+      "document_type": "act",
+      "url": "https://ipindia.gov.in/writereaddata/Portal/IPOGuide/1_38_1_patent-act-1970-11march2015.pdf",
+      "alternate_urls": [
+        "https://ipindia.gov.in/patents.htm"
+      ],
+      "description": "The primary Indian legislation governing patents, as amended.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_patent_rules_2003",
+      "name": "The Patents Rules, 2003",
+      "authority": "IP India / CGPDTM",
+      "authority_tier": "TIER_1",
+      "domain": "patent",
+      "document_type": "rules",
+      "url": "https://ipindia.gov.in/writereaddata/Portal/IPOAct/1_113_1_patent-rules-2003-as-amended-till-may2016.pdf",
+      "alternate_urls": [
+        "https://ipindia.gov.in/patents.htm"
+      ],
+      "description": "Rules made under The Patents Act, 1970.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_trademark_act_1999",
+      "name": "The Trade Marks Act, 1999",
+      "authority": "IP India / CGPDTM",
+      "authority_tier": "TIER_1",
+      "domain": "trademark",
+      "document_type": "act",
+      "url": "https://ipindia.gov.in/writereaddata/Portal/IPOGuide/1_39_1_trade-marks-act-1999.pdf",
+      "alternate_urls": [
+        "https://ipindia.gov.in/trade-marks.htm"
+      ],
+      "description": "The primary Indian legislation governing trade marks.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_trademark_rules_2017",
+      "name": "The Trade Marks Rules, 2017",
+      "authority": "IP India / CGPDTM",
+      "authority_tier": "TIER_1",
+      "domain": "trademark",
+      "document_type": "rules",
+      "url": "https://ipindia.gov.in/writereaddata/Portal/IPOAct/1_107_1_TM_Rules_2017.pdf",
+      "alternate_urls": [
+        "https://ipindia.gov.in/trade-marks.htm"
+      ],
+      "description": "Rules governing trade mark registration procedures, fees and forms.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_copyright_act_1957",
+      "name": "The Copyright Act, 1957",
+      "authority": "Copyright Office, Government of India",
+      "authority_tier": "TIER_1",
+      "domain": "copyright",
+      "document_type": "act",
+      "url": "https://copyright.gov.in/Documents/CopyrightRules1958.pdf",
+      "alternate_urls": [
+        "https://copyright.gov.in/frmActandRules.aspx"
+      ],
+      "description": "The primary Indian legislation governing copyright.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_copyright_rules_2013",
+      "name": "The Copyright Rules, 2013",
+      "authority": "Copyright Office, Government of India",
+      "authority_tier": "TIER_1",
+      "domain": "copyright",
+      "document_type": "rules",
+      "url": "https://copyright.gov.in/Documents/CopyrightRules2013.pdf",
+      "alternate_urls": [
+        "https://copyright.gov.in/frmActandRules.aspx"
+      ],
+      "description": "Rules governing copyright registration and related procedures.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_designs_act_2000",
+      "name": "The Designs Act, 2000",
+      "authority": "IP India / CGPDTM",
+      "authority_tier": "TIER_1",
+      "domain": "design",
+      "document_type": "act",
+      "url": "https://ipindia.gov.in/writereaddata/Portal/IPOGuide/1_40_1_Designs_Act_2000.pdf",
+      "alternate_urls": [
+        "https://ipindia.gov.in/designs.htm"
+      ],
+      "description": "The primary Indian legislation governing industrial designs.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_designs_rules_2001",
+      "name": "The Designs Rules, 2001",
+      "authority": "IP India / CGPDTM",
+      "authority_tier": "TIER_1",
+      "domain": "design",
+      "document_type": "rules",
+      "url": "https://ipindia.gov.in/writereaddata/Portal/IPOAct/1_112_1_designs-rules-2001-amended-2008.pdf",
+      "alternate_urls": [
+        "https://ipindia.gov.in/designs.htm"
+      ],
+      "description": "Rules governing design registration procedures.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_gi_act_1999",
+      "name": "The Geographical Indications of Goods (Registration and Protection) Act, 1999",
+      "authority": "Geographical Indications Registry, IP India",
+      "authority_tier": "TIER_1",
+      "domain": "gi",
+      "document_type": "act",
+      "url": "https://ipindia.gov.in/writereaddata/Portal/IPOGuide/1_41_1_GI_Act_1999.pdf",
+      "alternate_urls": [
+        "https://ipindia.gov.in/geographical-indications.htm"
+      ],
+      "description": "Legislation governing GI registration and protection in India.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_gi_rules_2002",
+      "name": "The Geographical Indications of Goods (Registration and Protection) Rules, 2002",
+      "authority": "Geographical Indications Registry, IP India",
+      "authority_tier": "TIER_1",
+      "domain": "gi",
+      "document_type": "rules",
+      "url": "https://ipindia.gov.in/writereaddata/Portal/IPOAct/1_114_1_GI_Rules_2002.pdf",
+      "alternate_urls": [
+        "https://ipindia.gov.in/geographical-indications.htm"
+      ],
+      "description": "Rules governing GI registration procedures.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_sicld_act_2000",
+      "name": "The Semiconductor Integrated Circuits Layout-Design Act, 2000",
+      "authority": "Semiconductor Integrated Circuits Layout-Design Registry",
+      "authority_tier": "TIER_1",
+      "domain": "sicld",
+      "document_type": "act",
+      "url": "https://ipindia.gov.in/writereaddata/Portal/IPOGuide/1_42_1_SICLD_Act_2000.pdf",
+      "alternate_urls": [
+        "https://ipindia.gov.in/semiconductor-integrated-circuits-layout-design.htm"
+      ],
+      "description": "Legislation governing semiconductor IC layout design protection.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_startup_india_policy",
+      "name": "Startup India Action Plan",
+      "authority": "DPIIT, Ministry of Commerce and Industry",
+      "authority_tier": "TIER_1",
+      "domain": "startup",
+      "document_type": "guideline",
+      "url": "https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/198117.pdf",
+      "alternate_urls": [
+        "https://www.startupindia.gov.in"
+      ],
+      "description": "Official Startup India Action Plan and IP facilitation provisions.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_dpdp_act_2023",
+      "name": "The Digital Personal Data Protection Act, 2023",
+      "authority": "Ministry of Electronics and Information Technology (MeitY)",
+      "authority_tier": "TIER_1",
+      "domain": "data_protection",
+      "document_type": "act",
+      "url": "https://www.meity.gov.in/writereaddata/files/Digital%20Personal%20Data%20Protection%20Act%202023.pdf",
+      "alternate_urls": [
+        "https://www.meity.gov.in/data-protection-framework"
+      ],
+      "description": "India's primary data protection legislation.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_patent_manual_practice",
+      "name": "Manual of Patent Practice and Procedure",
+      "authority": "IP India / CGPDTM",
+      "authority_tier": "TIER_1",
+      "domain": "patent",
+      "document_type": "manual",
+      "url": "https://ipindia.gov.in/writereaddata/Portal/IPOGuide/1_43_1_Manual_of_Patent_Practice_and_Procedure.pdf",
+      "alternate_urls": [
+        "https://ipindia.gov.in/patents.htm"
+      ],
+      "description": "Official manual describing patent examination practice and procedure.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_trademark_manual_practice",
+      "name": "Trade Mark Manual of Practice and Procedure",
+      "authority": "IP India / CGPDTM",
+      "authority_tier": "TIER_1",
+      "domain": "trademark",
+      "document_type": "manual",
+      "url": "https://ipindia.gov.in/writereaddata/Portal/IPOGuide/1_107_1_TM-Manual.pdf",
+      "alternate_urls": [
+        "https://ipindia.gov.in/trade-marks.htm"
+      ],
+      "description": "Official manual for trade mark examination and practice.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_ip_india_faq_patent",
+      "name": "IP India FAQ — Patents",
+      "authority": "IP India",
+      "authority_tier": "TIER_1",
+      "domain": "patent",
+      "document_type": "faq",
+      "url": "https://ipindia.gov.in/faq-patents.htm",
+      "alternate_urls": [],
+      "description": "Frequently asked questions on patents from IP India.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_ip_india_faq_trademark",
+      "name": "IP India FAQ — Trade Marks",
+      "authority": "IP India",
+      "authority_tier": "TIER_1",
+      "domain": "trademark",
+      "document_type": "faq",
+      "url": "https://ipindia.gov.in/faq-trade-marks.htm",
+      "alternate_urls": [],
+      "description": "Frequently asked questions on trade marks from IP India.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_ip_india_faq_copyright",
+      "name": "Copyright Office FAQ",
+      "authority": "Copyright Office, Government of India",
+      "authority_tier": "TIER_1",
+      "domain": "copyright",
+      "document_type": "faq",
+      "url": "https://copyright.gov.in/frmFAQ.aspx",
+      "alternate_urls": [],
+      "description": "Frequently asked questions on copyright from the Copyright Office.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_biological_diversity_act_2002",
+      "name": "The Biological Diversity Act, 2002",
+      "authority": "Ministry of Environment, Forest and Climate Change, Government of India",
+      "authority_tier": "TIER_1",
+      "domain": "biodiversity",
+      "document_type": "act",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/2046/4/a2003-18.pdf",
+      "alternate_urls": [
+        "https://www.indiacode.nic.in/indiacode/handle/123456789/2046?view_type=browse",
+        "https://www.nbaindia.nic.in/"
+      ],
+      "description": "Primary Indian legislation governing conservation of biological diversity, access to biological resources, benefit sharing, and related approval requirements for intellectual property rights.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_tkdl_traditional_knowledge",
+      "name": "Traditional Knowledge Digital Library (TKDL)",
+      "authority": "Council of Scientific and Industrial Research (CSIR) and Ministry of AYUSH, Government of India",
+      "authority_tier": "TIER_1",
+      "domain": "traditional_knowledge",
+      "document_type": "knowledge_resource",
+      "url": "https://www.tkdl.res.in/tkdl/langdefault/common/Abouttkdl.asp",
+      "alternate_urls": [
+        "https://www.tkdl.res.in/tkdl/langdefault/common/home.asp",
+        "https://www.tkdl.res.in/tkdl/langdefault/common/SourceInfo.asp?GL=Eng",
+        "https://www.csir.res.in/en/tkdl/about-tkdl"
+      ],
+      "description": "Official Government of India resource providing information on the Traditional Knowledge Digital Library, its role in protecting Indian traditional medicinal knowledge including Ayurveda from misappropriation and wrongful patent claims.",
+      "language": "en",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "src_ipindia_ayush_inventions_guidelines_2025",
+      "name": "Guidelines for Examination of Ayush Related Inventions, 2025",
+      "authority": "Office of the Controller General of Patents, Designs and Trade Marks (CGPDTM), Government of India",
+      "authority_tier": "TIER_1",
+      "domain": "patent",
+      "document_type": "guidelines",
+      "url": "https://www.ipindia.gov.in/uploads/48750b1a-6e7e-481f-a6ff-ec5804cfdb78_Guidelines%20for%20Examination%20of%20Ayush%20Related%20Inventions.pdf",
+      "alternate_urls": [
+        "https://www.ipindia.gov.in/resource/patents-resources-guidelines"
+      ],
+      "description": "Official IP India guidelines for examination of patent applications relating to AYUSH systems, including Ayurveda-related inventions, traditional knowledge, biological materials, patentability, novelty and inventive step.",
+      "language": "en",
+      "status": "ACTIVE"
+    }
+  ]
+}
+
